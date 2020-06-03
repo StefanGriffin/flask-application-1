@@ -6,7 +6,7 @@ from src import db
 
 class EmailSignup(db.Model):
 
-    __tablename__ = "users"
+    # __tablename__ = "allusers"
 
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(80), unique=True, nullable=False)

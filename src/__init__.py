@@ -8,14 +8,8 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 
-# don`t share these in a production environment 
-# secret key
-# wtf csrf secret key
 
-# Configure the database
-
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
-
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('') 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
