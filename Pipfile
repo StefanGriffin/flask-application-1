@@ -4,12 +4,20 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
 
 [packages]
 flask = "==1.0.2"
 flask-wtf = "*"
 wtforms = "*"
+flask-bootstrap = "*"
+email-validator = "*"
+flask-sqlalchemy = "*"
+sqlalchemy = "*"
+psycopg2 = "*"
+flask-migrate = "*"
+requests = "*"
+pylint-flask = "*"
+pylint = "*"
 
 [requires]
 python_version = "3.8"

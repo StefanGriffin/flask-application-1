@@ -1,7 +1,6 @@
 import json
 from flask import render_template, request
 from src import app
-
 from .forms import landingForm
 
 
