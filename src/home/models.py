@@ -12,7 +12,7 @@ class EmailSignup(db.Model):
     full_name = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
 
-    def __repr__(self, full_name, email):
+    def __init__(self, full_name, email):
         self.full_name = full_name
         self.email = email
 
