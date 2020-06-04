@@ -8,6 +8,19 @@ from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 csrf = CSRFProtect(app)
 
+<<<<<<< HEAD
+=======
+# don`t share these in a production environment 
+# secret key
+# wtf csrf secret key
+
+# Configure the database
+
+app.debug = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:patrocle34@localhost/fweb1'
+
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
+>>>>>>> Flask-with-PostgreSQL
 
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('') 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

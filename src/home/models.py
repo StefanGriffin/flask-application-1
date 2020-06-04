@@ -6,14 +6,19 @@ from src import db
 
 class EmailSignup(db.Model):
 
+<<<<<<< HEAD
     # __tablename__ = "allusers"
+=======
+    __tablename__ = "allusers"
+>>>>>>> Flask-with-PostgreSQL
 
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(80), unique=True, nullable=False)
-    email = db.Column(db.String(), unique=True, nullable=False)
+    email = db.Column(db.String(80), unique=True, nullable=False)
 
-    # def __repr__(self):
-        # return '<User %r>' % self.username
+    def __init__(self, full_name, email):
+        self.full_name = full_name
+        self.email = email
 
 
 
