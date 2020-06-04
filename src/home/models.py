@@ -6,11 +6,7 @@ from src import db
 
 class EmailSignup(db.Model):
 
-<<<<<<< HEAD
-    # __tablename__ = "allusers"
-=======
     __tablename__ = "allusers"
->>>>>>> Flask-with-PostgreSQL
 
     id = db.Column(db.Integer, primary_key=True)
     full_name = db.Column(db.String(80), unique=True, nullable=False)
@@ -20,6 +16,16 @@ class EmailSignup(db.Model):
         self.full_name = full_name
         self.email = email
 
-
-
-
+    def save(self, commit=True):
+        # works for both create and update
+        if commit:
+            instance = self
+            if not instance.id:
+                db.session.add(instance)
+            try:
+                db.session.commit()
+            except Exception as e:
+                print("Exception occured\n", e, '\n')
+                db.session.rollback()
+            return True
+        return False
