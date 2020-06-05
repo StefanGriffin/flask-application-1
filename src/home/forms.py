@@ -2,8 +2,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, validators, ValidationError
 from .models import EmailSignup
 
-
-class landingForm(FlaskForm):
+class LandingForm(FlaskForm):
     full_name = StringField('Full name',
                             render_kw={"class": "form-control",
                                        "placeholder": "Full-name"},
@@ -28,3 +27,4 @@ class landingForm(FlaskForm):
         if obj is not None:
             msg = 'This email has already been taken'
             raise ValidationError(msg)
+

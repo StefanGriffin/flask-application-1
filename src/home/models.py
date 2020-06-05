@@ -27,5 +27,20 @@ class EmailSignup(db.Model):
             except Exception as e:
                 print("Exception occured\n", e, '\n')
                 db.session.rollback()
+                return False
+            return True
+        return False
+
+
+    def delete(self, commit=True):
+        # works for delete only 
+        if self.id:
+            db.session.delete(self)
+            try:
+                db.session.commit()
+            except Exception as e:
+                print("Exception occured\n", e, '\n')
+                db.session.rollback()
+                return False
             return True
         return False
