@@ -3,11 +3,14 @@ import os
 from flask import Flask
 from flask_wtf.csrf import CSRFProtect
 from flask_sqlalchemy import SQLAlchemy
+from flask_migrate import Migrate 
+
 # from .home.models import *
 
 
 app = Flask(__name__)
 csrf = CSRFProtect(app)
+
 
 # don`t share these in a production environment
 # secret key
@@ -21,9 +24,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:patrocle34@localh
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 # app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False 
 
 db = SQLAlchemy(app)
+migrate = Migrate(app, db)
 
 # db_path = os.path.join(os.path.dirname(__file__), 'db.sqlite3')
 # db_uri = 'sqlite:///{}'.format(db_path)

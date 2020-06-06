@@ -1,5 +1,5 @@
 import json
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for
 from src import app
 from .forms import LandingForm
 from .models import EmailSignup
@@ -26,7 +26,13 @@ def home():
             obj.save()
         # form = LandingForm()
         # return render_template('home.html', form=form)
-        return redirect("/item/{}".format(obj.id))
+        redirect_url = url_for('item_detail', id=obj.id)
+        return redirect(redirect_url)
+        # send e,ail -> via flask and smtp
+        # create txt doc
+        # create csv doc
+        # send webhook -> zapier -> google docs
+        # save-into-database -> sqlite -> mysql or postgresql
     return render_template('home.html', form=form)
 
 '''
@@ -38,19 +44,21 @@ primary keys to lookup in database
 use dynamic url routing to lookup object in databses
 
 '''
-@app.route("/items/", methods=['GET'])
+@app.route("/item/", methods=['GET'])
 def item_list():
     object_list = EmailSignup.query.all()
     return render_template("items/list.html", object_list=object_list)
 
 @app.route("/item/", methods=['GET'])
 def item_list_redirect():
-    return redirect("/items/")
+    redirect_url = url_for('item_list')
+    return redirect(redirect_url)
 
 
 @app.route("/items/<int:id>/", methods=['GET'])
 def item_detail_redirect(id):
-    return redirect("/item/{}/".format(id))
+    redirect_url = url_for('item_detail', id=id)
+    return redirect(redirect_url) 
 
 
 @app.route('/item/<int:id>/', methods=['GET'])
@@ -72,7 +80,8 @@ def item_update(id):
         instance.full_name = full_name
         instance.email = email
         instance.save()
-        return redirect("/item/{}/".format(instance.id))
+        redirect_url = url_for('item_detail', id=instance.id)
+        return redirect(redirect_url)
         # data = form.data
         # print(data)  
     return render_template('items/form.html', instance=instance, form=form)
