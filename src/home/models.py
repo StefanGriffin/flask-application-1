@@ -1,4 +1,5 @@
 # from flask_sqlalchemy import SQLAlchemy
+import datetime 
 from src import db
 
 from sqlalchemy import event
@@ -14,10 +15,10 @@ class EmailSignup(db.Model):
     full_name = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(80), unique=True, nullable=False)
 
+
     def __init__(self, full_name, email):
         self.full_name = full_name
         self.email = email
-        
 
     def save(self, commit=True):
         # works for both create and update
