@@ -19,6 +19,7 @@ requests = "*"
 pylint-flask = "*"
 pylint = "*"
 gunicorn = "*"
+heroku = "*"
 
 [requires]
 python_version = "3.8"
