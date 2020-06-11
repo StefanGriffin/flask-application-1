@@ -13,7 +13,7 @@ csrf = CSRFProtect(app)
 
 # Configure the database
 
-app.debug = True 
+app.debug = False
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:patrocle34@localhost/fweb1'
 
 # app.secret_key = os.environ.get('SECRET')
