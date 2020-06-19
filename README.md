@@ -6,7 +6,8 @@
 
 #### You can check it out right here:
 
-[Boost new ideas] (https://www.boostnewideas.com)
+#### Link Example 
+[Boost new ideas](https://www.boostnewideas.com)
 
 
 
