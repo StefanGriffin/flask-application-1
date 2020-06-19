@@ -6,7 +6,6 @@
 
 #### You can check it out right here:
 
-#### Link Example 
 [Boost new ideas](https://www.boostnewideas.com)
 
 
