@@ -33,8 +33,9 @@ app.config.update(dict(
 ))
 
 
-from .profiles.views import *
-from .jobs.views import *
+from .aboutus.views import *
+from .products.views import *
+from .contactus.views import *
 from .home.views import *
 from .views import *
 
