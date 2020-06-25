@@ -1,10 +1,7 @@
-# from flask_sqlalchemy import SQLAlchemy
 import datetime 
 from src import db
-
 from sqlalchemy import event
 
-# db = SQLAlchemy(app)
 
 
 class EmailSignup(db.Model):
