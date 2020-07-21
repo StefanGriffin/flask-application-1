@@ -3,7 +3,8 @@
         {
             "path": "/Users/griffin/.local/share/virtualenvs/flask-application-1-wKBM5dVX/bin/python",
 
-            "python.pythonPath": "/Users/griffin/.local/share/virtualenvs/flask-application-1-wKBM5dVX/bin/python",
+            "python.pythonPath": "/Users/griffin/.local/share/virtualenvs/flask-application-1-wKBM5dVX/bin/python"
+            
         }
     ],
     "settings": {}
