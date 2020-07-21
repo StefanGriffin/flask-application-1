@@ -38,6 +38,8 @@ app.config.update(dict(
     WTF_CSRF_SECRET_KEY='05cab3d7-5f31-471f-a3b1-366ebb42440c',
 ))
 
+# url_for('static', filename='style.css')
+
 
 from .profiles.views import *
 from .jobs.views import *
