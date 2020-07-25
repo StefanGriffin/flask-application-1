@@ -6,7 +6,7 @@
 
 #### You can check it out right here:
 
-[Recap](https://github.com/StefanGriffin/flask-application-1/commit/09618a4c61686ebda0f0e467019a5eb59efa0047)
+[1. Deploy to Heroku](hhttps://github.com/StefanGriffin/flask-application-1/tree/001f30f669699cc57752cdf0b027fd19084655de)
 
 [Boost new ideas](https://www.boostnewideas.com)
 
