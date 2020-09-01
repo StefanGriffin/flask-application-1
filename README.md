@@ -2,7 +2,13 @@
 
 ## Creating a Flask Webpage
 
-### This app is work in progress.
 
+<<<<<<< HEAD
 #### This project is NOT live
+=======
+
+
+
+
+>>>>>>> origin
 
